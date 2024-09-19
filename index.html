@@ -1,25 +1,178 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asjad Sajid Nirban - Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      .container {
+        width: 80%;
+        margin: 40px auto;
+      }
+      .skills,
+      .projects,
+      .contact {
+        margin-bottom: 50px;
+      }
+      h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+      .skills-list,
+      .projects-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .skills-list div,
+      .projects-list div {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px;
+        flex-basis: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .skills-list div h3,
+      .projects-list div h3 {
+        font-size: 1.5rem;
+        color: #007bff;
+      }
+      .skills-list div p,
+      .projects-list div p {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      .projects-list div a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      footer p {
+        font-size: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <h1>TestPage</h1>
-    <script src="" async defer></script>
+    <header>
+      <h1>Asjad Sajid Nirban</h1>
+      <p>Software Engineer | Data Scientist</p>
+    </header>
+
+    <div class="container">
+      <!-- Skills Section -->
+      <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div>
+            <h3>Programming Languages</h3>
+            <p>Python, JavaScript, C++, Java</p>
+          </div>
+          <div>
+            <h3>Data Science Tools</h3>
+            <p>NumPy, Pandas, Scikit-learn, TensorFlow</p>
+          </div>
+          <div>
+            <h3>Web Development</h3>
+            <p>React.js, Next.js, CodeIgniter, Laravel</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects">
+        <h2>Projects</h2>
+        <div class="projects-list">
+          <div>
+            <h3>Visiting Card Extractor</h3>
+            <p>
+              Developed a machine learning model that extracts company info from
+              visiting cards using Python and OCR libraries, integrated with a
+              WhatsApp chatbot.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div>
+            <h3>Blockchain Pharma Supply Chain</h3>
+            <p>
+              Built a blockchain-based pharmaceutical supply chain system using
+              Next.js, ensuring transparency and traceability.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div>
+            <h3>Web Application Development</h3>
+            <p>
+              Created a web app using CodeIgniter and Laravel frameworks,
+              optimized backend operations for improved performance.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:wjw8yd@virginia.edu">wjw8yd@virginia.edu</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/AsjadNirban" target="_blank"
+            >Asjad Nirban</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Asjad1007" target="_blank">Asjad1007</a>
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Asjad Sajid Nirban. All rights reserved.</p>
+    </footer>
   </body>
 </html>
