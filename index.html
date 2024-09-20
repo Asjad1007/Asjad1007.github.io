@@ -9,6 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <style>
       * {
         margin: 0;
@@ -24,28 +29,45 @@
         background-color: #007bff;
         color: white;
         padding: 30px 20px;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
       }
-      header h1 {
+      header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+      }
+      .header-text {
+        margin-left: 20px;
+      }
+      .header-text h1 {
         font-size: 2.5rem;
         font-weight: 600;
       }
-      header p {
+      .header-text p {
         font-size: 1.2rem;
       }
       .container {
         width: 80%;
         margin: 40px auto;
       }
-      .skills,
-      .projects,
-      .contact {
-        margin-bottom: 50px;
-      }
       h2 {
         font-size: 2rem;
         color: #007bff;
         margin-bottom: 20px;
+      }
+      .skills,
+      .projects,
+      .patents,
+      .publications,
+      .education,
+      .coding,
+      .resume {
+        margin-bottom: 50px;
       }
       .skills-list,
       .projects-list {
@@ -55,33 +77,49 @@
       }
       .skills-list div,
       .projects-list div {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        background-color: #f9f9f9;
+        border: 2px solid #ddd;
+        border-radius: 10px;
         padding: 20px;
-        margin: 10px;
-        flex-basis: 30%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        margin: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
       }
-      .skills-list div h3,
-      .projects-list div h3 {
+      .projects-list h3 {
         font-size: 1.5rem;
         color: #007bff;
+        margin-bottom: 10px;
       }
-      .skills-list div p,
-      .projects-list div p {
-        margin-top: 10px;
-        font-size: 1rem;
+      .projects-list p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
       }
-      .projects-list div a {
-        display: inline-block;
+      .education p,
+      .patents p,
+      .publications p,
+      .coding p {
         margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
+        font-size: 1.1rem;
+      }
+      .contact {
+        text-align: center;
+        margin: 40px 0;
+      }
+      .contact-info {
+        margin-top: 20px;
+      }
+      .contact-info a {
         text-decoration: none;
-        border-radius: 5px;
+        color: #333;
+        margin: 0 15px;
+        font-size: 2rem;
+      }
+      .contact-info i {
+        transition: color 0.3s;
+      }
+      .contact-info a:hover i {
+        color: #007bff;
       }
       footer {
         background-color: #007bff;
@@ -92,12 +130,53 @@
       footer p {
         font-size: 1rem;
       }
+
+      /* Coding section styles */
+      .coding-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .coding-platforms,
+      .coding-ranks {
+        width: 48%;
+      }
+      .coding-platforms ul,
+      .coding-ranks ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .coding-platforms li,
+      .coding-ranks li {
+        padding: 10px;
+        border: 0px solid #ddd;
+        border-radius: 4px;
+        margin: 5px 0;
+      }
+      .education-item {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .education-item h3 {
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+      .education-item p {
+        margin: 5px 0;
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1>Asjad Sajid Nirban</h1>
-      <p>Software Engineer | Data Scientist</p>
+      <img src="dp.jpg" alt="Asjad Sajid Nirban" />
+      <div class="header-text">
+        <h1>Asjad Sajid Nirban</h1>
+        <p>Software Engineer | Data Scientist</p>
+      </div>
     </header>
 
     <div class="container">
@@ -107,15 +186,19 @@
         <div class="skills-list">
           <div>
             <h3>Programming Languages</h3>
-            <p>Python, JavaScript, C++, Java</p>
+            <p>Python, C/C++, Java,</p>
+            <p>JavaScript, SQL, NoSql, Solidity</p>
           </div>
           <div>
             <h3>Data Science Tools</h3>
-            <p>NumPy, Pandas, Scikit-learn, TensorFlow</p>
+            <p>NumPy, Pandas, Scikit-learn, TensorFlow,</p>
+            <p>SQLite, Seaborn, SciPy, Matplotlib, Power BI</p>
           </div>
           <div>
             <h3>Web Development</h3>
-            <p>React.js, Next.js, CodeIgniter, Laravel</p>
+            <p>React.js, Next.js, CodeIgniter, Laravel,</p>
+            <p>PHP, HTML, CSS, MongoDB, Flask API,</p>
+            <p>Git/GitHub, VS Code, AWS, Bootstrap</p>
           </div>
         </div>
       </section>
@@ -127,11 +210,10 @@
           <div>
             <h3>Visiting Card Extractor</h3>
             <p>
-              Developed a machine learning model that extracts company info from
+              Developed a machine learning model to extract company info from
               visiting cards using Python and OCR libraries, integrated with a
               WhatsApp chatbot.
             </p>
-            <a href="#">View Project</a>
           </div>
           <div>
             <h3>Blockchain Pharma Supply Chain</h3>
@@ -139,40 +221,201 @@
               Built a blockchain-based pharmaceutical supply chain system using
               Next.js, ensuring transparency and traceability.
             </p>
-            <a href="#">View Project</a>
           </div>
           <div>
             <h3>Web Application Development</h3>
             <p>
-              Created a web app using CodeIgniter and Laravel frameworks,
-              optimized backend operations for improved performance.
+              Created a web app using CodeIgniter and Laravel, optimized backend
+              operations for improved performance.
             </p>
-            <a href="#">View Project</a>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact">
-        <h2>Contact</h2>
+      <!-- Patent Section -->
+      <section class="patents">
+        <h2>Patents</h2>
+        <div class="patent">
+          <p>
+            <strong
+              >D Ein Blockchain-basiertes Medizinlogistiksystem –
+              (Granted)</strong
+            >
+          </p>
+          <p>German Patent File No: 20 2023 102 823.3</p>
+          <p>Date: 19 September 2023</p>
+          <p>
+            <a
+              href="https://register.dpma.de/DPMAregister/pat/register?AKZ=2020231028233&CURSOR=0"
+              target="_blank"
+              >View Patent</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Publication Section -->
+      <section class="publications">
+        <h2>Publications</h2>
+        <div class="publication">
+          <p>
+            <strong>
+              Survey paper on “Face Mask Detection And Attendance System” in
+              International Journal of Scientific and Research Publications
+              (IJSRP)
+              <a
+                href="https://www.ijsrp.org/research-paper-0321/ijsrp-p11140.pdf"
+                target="_blank"
+                >[Link]</a
+              >
+              (Impact Factor: 7.662)
+            </strong>
+          </p>
+        </div>
+        <div class="publication">
+          <p>
+            <strong>
+              Paper on “Face Mask Detection and Attendance System” in
+              International Research Journal of Engineering and Technology
+              (IRJET)
+              <a
+                href="https://www.irjet.net/archives/V8/i6/IRJET-V8I6601.pdf"
+                target="_blank"
+                >[Link]</a
+              >
+              (Impact Factor: 7.529)
+            </strong>
+          </p>
+        </div>
+        <div class="publication">
+          <p>
+            <strong>
+              Paper on “Crowdfunding For Engineering Startups using Blockchain
+              And Smart Contracts” in International Journal Of Research And
+              Analytical Reviews (IJRAR)
+              <a
+                href="https://www.ijrar.org/viewfull.php?&p_id=IJRAR21A1843"
+                target="_blank"
+                >[Link]</a
+              >
+              (Impact Factor: 5.75)
+            </strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>Master of Science in Computer Science (MSCS)</h3>
+          <p>University of Virginia (UVA)</p>
+          <p>2024 - Present</p>
+        </div>
+        <div class="education-item">
+          <h3>Bachelor of Technology in Computer Science</h3>
+          <p>XYZ University</p>
+          <p>GPA: 3.6/4.0</p>
+          <p>2018 - 2022</p>
+        </div>
+      </section>
+
+      <!-- Coding Competitions Section -->
+      <section class="coding">
+        <h2>Coding Competitions</h2>
+        <div class="coding-container">
+          <div class="coding-platforms">
+            <h3>Coding Platforms</h3>
+            <ul>
+              <li>Codeforces</li>
+              <li>CodeChef</li>
+              <li>Coding Ninjas</li>
+            </ul>
+          </div>
+          <div class="coding-ranks">
+            <h3>Competition Ranks</h3>
+            <ul>
+              <li>ICPC - Global Rank: 699th</li>
+              <li>Reply Code Challenge - Global Rank: 285th</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin: 40px 0">
+        <h2 style="color: #007bff">Certifications</h2>
+        <div style="font-size: 1.1rem">
+          <p style="margin: 10px 0">AWS Academy Cloud Foundations</p>
+          <p style="margin: 10px 0">CCNAv7: Introduction to Networks</p>
+          <p style="margin: 10px 0">
+            CCNAv7: Switching, Routing and Wireless Essentials
+          </p>
+          <p style="margin: 10px 0">
+            CCNAv7: Enterprise Networking, Security, and Automation
+          </p>
+          <p style="margin: 10px 0">Python for Everybody</p>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section class="resume">
+        <h2>Resume</h2>
         <p>
-          Email: <a href="mailto:wjw8yd@virginia.edu">wjw8yd@virginia.edu</a>
+          <a href="path/to/your/resume.pdf" target="_blank">Download Resume</a>
         </p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/AsjadNirban" target="_blank"
-            >Asjad Nirban</a
-          >
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/Asjad1007" target="_blank">Asjad1007</a>
-        </p>
+      </section>
+
+      <section style="text-align: center; margin: 40px 0">
+        <h2 style="color: #007bff">Contact Me</h2>
+        <div
+          style="
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+          "
+        >
+          <p style="margin: 10px 0">
+            Personal Email:
+            <a
+              href="mailto:asjad.nirban@gmail.com"
+              style="text-decoration: none; color: #007bff"
+              >asjad.nirban@gmail.com</a
+            >
+          </p>
+          <p style="margin: 10px 0">
+            College Email:
+            <a
+              href="mailto:wjw8yd@virginia.edu"
+              style="text-decoration: none; color: #007bff"
+              >wjw8yd@virginia.edu</a
+            >
+          </p>
+
+          <p style="margin: 10px 0">
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/asjadnirban/"
+              target="_blank"
+              style="text-decoration: none; color: #007bff"
+              >AsjadNirban</a
+            >
+          </p>
+          <p style="margin: 10px 0">
+            GitHub:
+            <a
+              href="https://github.com/Asjad1007"
+              target="_blank"
+              style="text-decoration: none; color: #007bff"
+              >Asjad1007</a
+            >
+          </p>
+        </div>
       </section>
     </div>
 
     <footer>
-      <p>&copy; 2024 Asjad Sajid Nirban. All rights reserved.</p>
+      <p>&copy; 2024 Asjad Sajid Nirban</p>
     </footer>
   </body>
 </html>
