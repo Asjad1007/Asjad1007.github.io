@@ -168,6 +168,26 @@
       .education-item p {
         margin: 5px 0;
       }
+
+      .impact-factor {
+        color: #ff6347; /* Tomato color to highlight Impact Factor */
+        font-weight: bold;
+      }
+
+      .publication a {
+        text-decoration: none;
+        color: #007acc; /* A professional blue color for links */
+        font-weight: bold;
+      }
+
+      .publication a:hover {
+        text-decoration: underline; /* Underline the link on hover for emphasis */
+      }
+
+      .link-icon::before {
+        content: "\1F517"; /* Unicode for link icon */
+        margin-right: 5px;
+      }
     </style>
   </head>
   <body>
@@ -257,51 +277,50 @@
       <!-- Publication Section -->
       <section class="publications">
         <h2>Publications</h2>
-        <div class="publication">
-          <p>
+        <ul>
+          <li>
             <strong>
               Survey paper on “Face Mask Detection And Attendance System” in
               International Journal of Scientific and Research Publications
               (IJSRP)
               <a
                 href="https://www.ijsrp.org/research-paper-0321/ijsrp-p11140.pdf"
+                class="link-icon"
                 target="_blank"
-                >[Link]</a
+                >Link</a
               >
-              (Impact Factor: 7.662)
+              <span class="impact-factor">(Impact Factor: 7.662)</span>
             </strong>
-          </p>
-        </div>
-        <div class="publication">
-          <p>
+          </li>
+          <li>
             <strong>
               Paper on “Face Mask Detection and Attendance System” in
               International Research Journal of Engineering and Technology
               (IRJET)
               <a
                 href="https://www.irjet.net/archives/V8/i6/IRJET-V8I6601.pdf"
+                class="link-icon"
                 target="_blank"
-                >[Link]</a
+                >Link</a
               >
-              (Impact Factor: 7.529)
+              <span class="impact-factor">(Impact Factor: 7.529)</span>
             </strong>
-          </p>
-        </div>
-        <div class="publication">
-          <p>
+          </li>
+          <li>
             <strong>
               Paper on “Crowdfunding For Engineering Startups using Blockchain
               And Smart Contracts” in International Journal Of Research And
               Analytical Reviews (IJRAR)
               <a
                 href="https://www.ijrar.org/viewfull.php?&p_id=IJRAR21A1843"
+                class="link-icon"
                 target="_blank"
-                >[Link]</a
+                >Link</a
               >
-              (Impact Factor: 5.75)
+              <span class="impact-factor">(Impact Factor: 7.17)</span>
             </strong>
-          </p>
-        </div>
+          </li>
+        </ul>
       </section>
 
       <!-- Education Section -->
@@ -310,13 +329,13 @@
         <div class="education-item">
           <h3>Master of Science in Computer Science (MSCS)</h3>
           <p>University of Virginia (UVA)</p>
-          <p>2024 - Present</p>
+          <p>Aug 2024 - Dec 2025</p>
         </div>
         <div class="education-item">
-          <h3>Bachelor of Technology in Computer Science</h3>
-          <p>XYZ University</p>
-          <p>GPA: 3.6/4.0</p>
-          <p>2018 - 2022</p>
+          <h3>BE in Computer Engineering</h3>
+          <p>University of Mumbai</p>
+          <p>GPA: 9.12/10.00</p>
+          <p>Aug 2019 - May 2023</p>
         </div>
       </section>
 
@@ -326,15 +345,39 @@
         <div class="coding-container">
           <div class="coding-platforms">
             <h3>Coding Platforms</h3>
-            <ul>
-              <li>Codeforces</li>
-              <li>CodeChef</li>
-              <li>Coding Ninjas</li>
+            <ul style="list-style-type: disc; padding-left: 20px">
+              <li>
+                Codeforces:
+                <a
+                  href="https://codeforces.com/profile/Asjad1007"
+                  target="_blank"
+                  style="color: #007bff; text-decoration: none"
+                  >Asjad1007</a
+                >
+              </li>
+              <li>
+                CodeChef:
+                <a
+                  href="https://www.codechef.com/users/asjad1007"
+                  target="_blank"
+                  style="color: #007bff; text-decoration: none"
+                  >Asjad1007</a
+                >
+              </li>
+              <li>
+                Coding Ninjas:
+                <a
+                  href="https://www.naukri.com/code360/profile/272aa20d-c145-4669-8bd8-bad96867e620"
+                  target="_blank"
+                  style="color: #007bff; text-decoration: none"
+                  >AsjadNirban</a
+                >
+              </li>
             </ul>
           </div>
           <div class="coding-ranks">
             <h3>Competition Ranks</h3>
-            <ul>
+            <ul style="list-style-type: disc; padding-left: 20px">
               <li>ICPC - Global Rank: 699th</li>
               <li>Reply Code Challenge - Global Rank: 285th</li>
             </ul>
@@ -361,7 +404,7 @@
       <section class="resume">
         <h2>Resume</h2>
         <p>
-          <a href="path/to/your/resume.pdf" target="_blank">Download Resume</a>
+          <a href="Asjad_Nirban_Resume.pdf" target="_blank">Download Resume</a>
         </p>
       </section>
 
