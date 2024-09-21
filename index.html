@@ -229,7 +229,11 @@
               border-radius: 8px;
               padding: 15px;
               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              transition: all 0.3s ease;
+              transform: scale(1);
             "
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 15px rgba(0, 0, 0, 0.2)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 5px rgba(0, 0, 0, 0.1)';"
           >
             <h3 style="color: #007bff">Programming Languages</h3>
             <p>Python, C/C++, Java, JavaScript, SQL, NoSQL, Solidity</p>
