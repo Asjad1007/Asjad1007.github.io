@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import bg from "../assets/background.jpg";
+import bg from "../assets/background.webp";
 
 export default function Layout({ children }) {
   return (
