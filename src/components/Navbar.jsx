@@ -1,96 +1,38 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { Home, FolderGit2, Briefcase, User, Mail } from "lucide-react";
 
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+const navItems = [
+  { name: "Home", id: "home", icon: Home },
+  { name: "Work", id: "work", icon: FolderGit2 },
+  { name: "Experience", id: "experience", icon: Briefcase },
+  { name: "Skills", id: "skills", icon: User },
+  { name: "Contact", id: "contact", icon: Mail },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  const location = useLocation();
-  const currentPath = location.pathname;
-  const linkClass = (path) =>
-    `hover:text-blue-400 transition ${
-      currentPath === path ? "border-b-2 border-blue-400" : ""
-    }`;
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/0 backdrop-blur-md text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold tracking-wide">
-          Asjad Nirban
-        </Link>
-
-        {/* Desktop nav */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium">
-          <Link to="/" className={linkClass("/")}>
-            Home
-          </Link>
-          <Link to="/about" className={linkClass("/about")}>
-            About
-          </Link>
-          <Link to="/projects" className={linkClass("/projects")}>
-            Projects
-          </Link>
-          <Link to="/experience" className={linkClass("/experience")}>
-            Experience
-          </Link>
-          <Link to="/publications" className={linkClass("/publications")}>
-            Publications
-          </Link>
-          {/* <Link to="/contact" className={linkClass("/contact")}>
-            Contact
-          </Link> */}
-        </nav>
-
-        {/* Mobile toggle */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+      <div className="flex items-center gap-2 p-2 rounded-full bg-zinc-900/80 backdrop-blur-xl border border-white/10 shadow-2xl">
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id)}
+            className="p-3 rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-all group relative"
+          >
+            <item.icon size={20} />
+            <span className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-zinc-900 text-white text-xs px-2 py-1 rounded border border-white/10 pointer-events-none whitespace-nowrap">
+              {item.name}
+            </span>
           </button>
-        </div>
+        ))}
       </div>
-
-      {/* Mobile menu dropdown */}
-      {isOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-2 text-sm font-medium bg-black/60 backdrop-blur-md">
-          <Link
-            to="/"
-            onClick={toggleMenu}
-            className="block hover:text-blue-400"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            onClick={toggleMenu}
-            className="block hover:text-blue-400"
-          >
-            About
-          </Link>
-          <Link
-            to="/projects"
-            onClick={toggleMenu}
-            className="block hover:text-blue-400"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/experience"
-            onClick={toggleMenu}
-            className="block hover:text-blue-400"
-          >
-            Experience
-          </Link>
-          <Link
-            to="/publications"
-            onClick={toggleMenu}
-            className="block hover:text-blue-400"
-          >
-            Publications
-          </Link>
-        </div>
-      )}
-    </header>
+    </div>
   );
 }

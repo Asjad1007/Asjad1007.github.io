@@ -1,26 +1,39 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
-import Publications from "./pages/Publications";
+import { useRef } from "react";
+import StarryBackground from "./components/Background";
+import Hero from "./sections/Hero";
+import Work from "./sections/Work";
+import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/publications" element={<Publications />} />
-        </Routes>
-      </Layout>
-    </>
+    <div className="bg-zinc-950 text-white selection:bg-white selection:text-black">
+      <StarryBackground />
+      <Navbar />
+
+      <main className="space-y-32 pb-32">
+        <section id="home">
+          <Hero />
+        </section>
+
+        <section id="work">
+          <Work />
+        </section>
+
+        <section id="experience">
+          <Experience />
+        </section>
+
+        <section id="skills">
+          <Skills />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+    </div>
   );
 }
