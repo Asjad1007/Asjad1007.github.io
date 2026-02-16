@@ -38,9 +38,49 @@ body {
 
 /* Utilities */
 .glass-panel {
-  @apply bg-zinc-900/50 backdrop-blur-xl border border-white/5 shadow-xl;
+  @apply bg-zinc-900/60 backdrop-blur-2xl border border-white/[0.08] shadow-2xl;
 }
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-br from-white to-zinc-500;
+}
+
+/* Gradient mesh background animations */
+@keyframes drift-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -20px) scale(1.05); }
+  50% { transform: translate(-20px, 30px) scale(0.95); }
+  75% { transform: translate(20px, 20px) scale(1.02); }
+}
+
+@keyframes drift-reverse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-30px, 20px) scale(0.95); }
+  50% { transform: translate(20px, -30px) scale(1.05); }
+  75% { transform: translate(-20px, -20px) scale(0.98); }
+}
+
+.animate-drift-slow {
+  animation: drift-slow 20s ease-in-out infinite;
+}
+
+.animate-drift-reverse {
+  animation: drift-reverse 25s ease-in-out infinite;
+}
+
+/* Gradient border utility */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(59,130,246,0.3), rgba(16,185,129,0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }

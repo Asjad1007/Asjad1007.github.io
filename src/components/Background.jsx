@@ -1,77 +1,28 @@
-import React, { useEffect, useRef } from "react";
-
-const StarryBackground = () => {
-    const canvasRef = useRef(null);
-
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d");
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-
-        canvas.width = width;
-        canvas.height = height;
-
-        const stars = [];
-        // Reduced star count for cleaner look
-        const numStars = 150;
-
-        for (let i = 0; i < numStars; i++) {
-            stars.push({
-                x: Math.random() * width,
-                y: Math.random() * height,
-                radius: Math.random() * 1.2, // Smaller, sharper stars
-                alpha: Math.random() * 0.5 + 0.2,
-                dx: (Math.random() - 0.5) * 0.1, // Even slower movement
-                dy: (Math.random() - 0.5) * 0.1
-            })
-        }
-
-
-        const draw = () => {
-            ctx.clearRect(0, 0, width, height);
-
-            // Simpler draw loop
-            ctx.fillStyle = "white";
-            stars.forEach((star) => {
-                ctx.globalAlpha = star.alpha;
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                ctx.fill();
-
-                star.x += star.dx;
-                star.y += star.dy;
-
-                if (star.x < 0) star.x = width;
-                if (star.x > width) star.x = 0;
-                if (star.y < 0) star.y = height;
-                if (star.y > height) star.y = 0;
-            });
-
-            requestAnimationFrame(draw);
-        };
-
-        const handleResize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            canvas.width = width;
-            canvas.height = height;
-        }
-
-        window.addEventListener("resize", handleResize);
-        draw();
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+export default function Background() {
     return (
-        <canvas
-            ref={canvasRef}
-            className="fixed top-0 left-0 w-full h-full -z-50 bg-zinc-950"
-        />
-    );
-};
+        <div className="fixed inset-0 -z-50 bg-zinc-950 overflow-hidden">
+            {/* Gradient Orbs */}
+            <div
+                className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-[0.07] blur-[120px] animate-drift-slow"
+                style={{ background: 'radial-gradient(circle, #7c3aed, transparent 70%)' }}
+            />
+            <div
+                className="absolute top-[40%] right-[-15%] w-[500px] h-[500px] rounded-full opacity-[0.05] blur-[120px] animate-drift-reverse"
+                style={{ background: 'radial-gradient(circle, #3b82f6, transparent 70%)' }}
+            />
+            <div
+                className="absolute bottom-[-10%] left-[30%] w-[400px] h-[400px] rounded-full opacity-[0.06] blur-[120px] animate-drift-slow"
+                style={{ background: 'radial-gradient(circle, #10b981, transparent 70%)' }}
+            />
 
-export default StarryBackground;
+            {/* Noise Texture Overlay */}
+            <div className="absolute inset-0 opacity-[0.03]"
+                style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'repeat',
+                    backgroundSize: '128px 128px',
+                }}
+            />
+        </div>
+    );
+}
