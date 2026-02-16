@@ -10,7 +10,7 @@ export default function Hero() {
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
             >
-                <h2 className="text-xl md:text-2xl text-zinc-400 tracking-wide font-light flex items-center gap-3">
+                <h2 className="text-xl md:text-2xl text-zinc-300 tracking-wide font-light flex items-center gap-3">
                     I am Asjad Nirban.
                 </h2>
 
@@ -22,7 +22,7 @@ export default function Hero() {
                 </h1>
 
                 <div className="max-w-4xl space-y-4">
-                    <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-light">
                         Master's Graduate in Computer Science from{' '}
                         <a
                             href="https://www.virginia.edu/"
@@ -35,7 +35,7 @@ export default function Hero() {
                         </a>
                         .
                     </p>
-                    <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-light">
                         Building backend systems, data pipelines, and intelligent software.
                     </p>
                 </div>

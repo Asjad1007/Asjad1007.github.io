@@ -36,7 +36,7 @@ export default function Skills() {
     return (
         <div className="px-6 md:px-12 max-w-7xl mx-auto space-y-24">
             <div className="border-b border-zinc-800 pb-8">
-                <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest">04 / Arsenal & Statistics</h2>
+                <h2 className="text-sm font-mono text-zinc-400 uppercase tracking-widest">04 / Arsenal & Statistics</h2>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-16 md:gap-24">
@@ -52,8 +52,8 @@ export default function Skills() {
                                 className="text-center p-6 bg-zinc-900/30 rounded-2xl border border-white/5"
                             >
                                 <div className="text-3xl md:text-3xl font-bold text-white mb-2">{stat.value}</div>
-                                <div className="text-xs text-zinc-500 uppercase tracking-wider">{stat.sub}</div>
-                                <div className="text-xs text-zinc-600 mt-1">{stat.label}</div>
+                                <div className="text-xs text-zinc-400 uppercase tracking-wider">{stat.sub}</div>
+                                <div className="text-xs text-zinc-500 mt-1">{stat.label}</div>
                             </motion.div>
                         ))}
                     </div>
@@ -64,7 +64,7 @@ export default function Skills() {
                             {skills.map((skill, idx) => (
                                 <span
                                     key={idx}
-                                    className="px-3 py-1.5 text-sm text-zinc-400 border border-zinc-800 rounded-lg hover:border-zinc-600 hover:text-white transition-colors cursor-default"
+                                    className="px-3 py-1.5 text-sm text-zinc-300 border border-zinc-800 rounded-lg hover:border-zinc-600 hover:text-white transition-colors cursor-default"
                                 >
                                     {skill}
                                 </span>
@@ -80,11 +80,11 @@ export default function Skills() {
                         <div className="space-y-6">
                             <div className="space-y-1">
                                 <h4 className="text-white font-medium">University of Virginia</h4>
-                                <p className="text-zinc-400 text-sm">Master of Science in Computer Science</p>
+                                <p className="text-zinc-300 text-sm">Master of Science in Computer Science</p>
                             </div>
                             <div className="space-y-1">
                                 <h4 className="text-white font-medium">University of Mumbai</h4>
-                                <p className="text-zinc-400 text-sm">Bachelor of Engineering in Computer Engineering (9.12/10)</p>
+                                <p className="text-zinc-300 text-sm">Bachelor of Engineering in Computer Engineering (9.12/10)</p>
                             </div>
                         </div>
                     </div>

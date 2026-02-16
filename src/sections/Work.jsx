@@ -52,7 +52,7 @@ export default function Work() {
     return (
         <div className="px-6 md:px-12 max-w-7xl mx-auto space-y-32">
             <div className="border-b border-zinc-800 pb-8">
-                <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest">01 / Selected Work</h2>
+                <h2 className="text-sm font-mono text-zinc-400 uppercase tracking-widest">01 / Selected Work</h2>
             </div>
 
             {projects.map((project, idx) => (
@@ -85,8 +85,8 @@ export default function Work() {
 
                         <div className={`order-1 ${idx % 2 === 0 ? "lg:order-2" : "lg:order-1"} space-y-6`}>
                             <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-white">{project.title}</h3>
-                            <p className="text-xl text-zinc-400 leading-relaxed font-light">{project.description}</p>
-                            <div className="text-zinc-500 font-mono text-sm">{project.tech}</div>
+                            <p className="text-xl text-zinc-300 leading-relaxed font-light">{project.description}</p>
+                            <div className="text-zinc-400 font-mono text-sm">{project.tech}</div>
 
                             {project.link && (
                                 <a
